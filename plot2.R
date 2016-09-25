@@ -1,5 +1,12 @@
-## Init
+## Download and unzip data
 rm(list=ls())
+fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+fileDownloadDest <- "exdata%2Fdata%2Fhousehold_power_consumption.zip"
+download.file(fileUrl, fileDownloadDest, method = "curl")
+unzip(fileDownloadDest)
+
+
+## Init
 par(mfrow = c(1,1))
 library("lubridate") # Introduced in "Getting and Cleaning Data"
 
